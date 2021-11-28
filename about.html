@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #home {
+            height: 200px;
+        }
+
+        #home #home_box1 {
+            font-size: 25px;
+            width: 100%;
+            height: 200px;
+        }
+
+        #middle2 #middle_box2 {
+            height: 400px;
+            font-size: 20px; 
+           justify-content: center;
+        }
+
+        #middle2 #middle_box2 .inside_box {
+            width: 800px;
+
+        }
+
+        @media(max-width:800px) {
+
+            #home {
+                height: unset;
+            }
+
+            #home #home_box1 {
+                width: unset;
+                font-size: 40px;
+            }
+
+            #middle2 #middle_box2 {
+                height: unset;
+                padding: 30px 20px;
+            }
+
+            #middle2 #middle_box2 .inside_box {
+                width: 400px;
+
+            }
+           
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="nav1">
+            <ul>
+                <li><span id="webname">Team</span></li>
+                <li><a href="/">home</a></li>
+                <li><a href="about.html" class="active">about</a></li>
+                <li><a href="contact.html" class="contact">Contact us</a></li>
+            </ul>
+        </div>
+        <div id="nav2">
+            <ul>
+                <li><a href=""
+                        style="padding-left:45px ; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: xx-large;">Team</a><span
+                        class="material-icons md-50" id="menu" onclick="menuchange()">menu</span></li>
+            </ul>
+        </div>
+    </header>
+    <div id="menubar">
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html" class="active">about</a></li>
+            <li><a href="contact.html" class="contact">Contact us</a></li>
+
+
+        </ul>
+    </div>
+    <div id="home">
+        <div id="home_box1">
+            <h1>
+                Details about <span class="tomato">the Developer</span>
+            </h1>
+
+        </div>
+    </div>
+
+
+    <div id="middle2">
+        <div id="middle_box2">
+            <div class="inside_box">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus odit itaque molestias neque.
+                    voluptatibus culpa sit ab eaque fugiat.</p><br><br><br>
+                <h2 class="tomato">Avinash Jha</h2>
+                <span>CSE Engineer</span>
+                <div class="logo">
+                    <img src="image/logo.jpg">
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div id="middle3">
+        <div id="middle_box1">
+            <h1>Ready to get started?</h1>
+
+        </div>
+        <div id="middle_box2">
+            <ul>
+                <li>
+                    <a href="contact.html" class="contact">Contact us</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div id="bottom">
+        <div id="box1">
+            <h1>Team1</h1>
+
+
+        </div>
+        <div id="box2">
+            <h1>Team2</h1>
+
+        </div>
+    </div>
+
+    <script src="./static/js/frontend.js"></script>
+
+</body>
+
+</html>

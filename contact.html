@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #middle1{
+            height: auto;
+            padding: 20px 0px;
+        }
+        #middle1 #middle_box1 {
+            
+            flex-direction: column;
+            font-size: 32px;
+
+        }
+        #form input{
+            background-color: unset;
+            border: unset;
+            color: white;
+            border-bottom: 2px solid rgb(255, 255, 255);
+            width: 375px;
+            margin: 7px 0px;
+            height: 30px;
+            font-size: 16px;
+        }
+        
+        ::placeholder{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 15px;
+            font-size: 16px;
+            color: rgb(255, 255, 255);
+        }
+        
+        textarea{
+            color: white;
+            background-color: unset;
+            border: 2px solid white;
+            width: 350px;
+            height: 90px;
+            padding: 10px;
+        }
+       #form #submit, #form #reset{
+            width: 60px;
+            height: 23px;
+            background-color: white;
+            color: black;
+            margin: 8px;
+            border-radius: 15px;
+        }
+
+        @media(max-width:800px) {
+            #middle1 #middle_box1 {
+                 font-size: 23px;
+            }
+            textarea{
+            
+            width: 250px;
+        }
+        
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="nav1">
+            <ul>
+                <li><a href="">Team</a></li>
+                <li><a href="/">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="contact.html" class="contact active">Contact us</a></li>   
+            </ul>
+        </div>
+        <div id="nav2">
+            <ul>
+                <li><a href="" style="padding-left:45px ; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: xx-large;">Team</a><span class="material-icons md-50" id="menu" onclick="menuchange()">menu</span></li>
+            </ul>
+        </div>
+    </header>
+    <div id="menubar">
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="contact.html" class="contact active">Contact us</a></li>
+            
+
+        </ul>
+    </div>
+    <div id="home">
+        <div id="home_box1">
+            <h1>
+                Find the <span class="tomato">best talent</span>
+            </h1>
+
+        </div>
+        <div id="home_box2">
+            <p>Lorem ipsum dolor rem cupiditate, mollitia, fugit esse soluta impedit nulla dolore ratione quo rem
+                quisquam. Nemo, sapiente.</p>
+        </div>
+    </div>
+    <div id="middle1">
+        <div id="middle_box1">
+            <h2><span class="tomato">Contact</span> Ask us about</h2>
+            <span>The quality of our talent network</span>
+
+        </div>
+        <div id="middle_box2">
+            <form action="/contactform" method="POST" id="form">
+                <div><input type="text" name="Name" placeholder="Name"></div><br>
+                <div><input type="text" name="Address" placeholder="Address"></div><br>
+                <div><input type="number" name="Mobile" placeholder="Number"></div><br>
+                <div><input type="email" name="Email" placeholder="Email"></div><br>
+                <textarea type="detail" name="More_info">Message...</textarea>
+                <div>
+                    <input type="submit" value="submit"id="submit"><br>
+                    <input type="reset"id="reset">
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <div id="middle3">
+        <div id="middle_box1">
+            <h1>Back to home?</h1>
+
+        </div>
+        <div id="middle_box2">
+            <ul>
+                <li>
+                    <a href="index.html" class="contact">home</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div id="bottom">
+        <div id="box1">
+            <h1>Team1</h1>
+
+
+        </div>
+        <div id="box2">
+            <h1>Team2</h1>
+
+        </div>
+    </div>
+
+    <script src="./static/js/frontend.js"></script>
+
+</body>
+
+</html>
