@@ -404,7 +404,7 @@ ul li a:hover,.active {
     #middle0 input{
         width: 200px;
     }
-    .material-icons{
+    #middle0 .material-icons{
         display: none;
     }
 
