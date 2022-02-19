@@ -3,6 +3,9 @@ const bodyParser = require("body-parser");
 const request = require("request");
 const https = require("https");
 const app = express();
+
+app.set('view engine', 'ejs');
+
 app.use(bodyParser.urlencoded({extended:true}));
 // Render Static Files on Web
 app.use(express.static("static"));
@@ -11,6 +14,48 @@ app.use(express.static("static"));
 app.get('/',function (req,res) {
 res.sendFile(__dirname+"/index.html");
 });
+
+app.post('/', function (req, res) {
+    const city = req.body.cityname;
+    const apikey="53fc7a6806831afb49db5ffb8440ab02";
+    const units="metric"
+    const url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid="+ apikey +"&units="+units; 
+
+    https.get(url, function (response) {
+
+        response.on("data", function (data) {
+            const w = JSON.parse(data);
+            const code=w.cod;
+            if(code==200)
+            {
+                const temp = w.main.temp;
+            const desc = w.weather[0].description;
+            const icon = w.weather[0].icon;
+           
+            const imgUrl = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
+            // res.write("<h1>The Temperature in " + city + " is " + temp + "degree celcius</h1>");
+            // res.write("<h4>The Current Weather is " + desc + "</h4>");
+            // res.write("<img src=" + imgUrl + ">");
+
+            const temp_detail="The Temperature in " + city + " is " + temp + " degree celcius";
+            res.render('index',{temp:temp,city:city,desc:desc,imgUrl:imgUrl});
+            res.send();
+            }
+            else
+                {
+                    res.sendFile(__dirname+"/index.html");
+                }
+            
+            
+
+        })
+    });
+});
+
+
+
+
+
 app.get('/index.html',function (req,res) {
     res.sendFile(__dirname+"/index.html");
     });
