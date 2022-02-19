@@ -11,6 +11,9 @@ app.use(express.static("static"));
 app.get('/',function (req,res) {
 res.sendFile(__dirname+"/index.html");
 });
+app.get('/index.html',function (req,res) {
+    res.sendFile(__dirname+"/index.html");
+    });
 app.get('/contact.html',function (req,res) {
     res.sendFile(__dirname+"/contact.html");
 });
