@@ -31,11 +31,7 @@ app.post('/', function (req, res) {
                 const temp = w.main.temp;
             const desc = w.weather[0].description;
             const icon = w.weather[0].icon;
-           
             const imgUrl = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
-            // res.write("<h1>The Temperature in " + city + " is " + temp + "degree celcius</h1>");
-            // res.write("<h4>The Current Weather is " + desc + "</h4>");
-            // res.write("<img src=" + imgUrl + ">");
 
             const temp_detail="The Temperature in " + city + " is " + temp + " degree celcius";
             res.render('index',{temp:temp,city:city,desc:desc,imgUrl:imgUrl});
