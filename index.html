@@ -6,43 +6,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet"> 
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="https://fonts.google.com/icons?selected=Material%20Icons%20Outlined%3Ahome%3A">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+   
+    <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="/image/favicon.jpg" type="image/x-icon">
+    <script src="https://use.fontawesome.com/7870188998.js"></script>
 
 </head>
+<style>
+    #menubar1 {
+        display: inline-block;
+        flex-direction: row;
+        border: 1px solid rgb(235, 0, 0);
+    }
+    .material-icons{
+        margin-right: 40px;
+        margin-left: 20px;
+        font-size: 46px;
+    }
+</style>
 
 <body>
-    <header>
-        <div id="nav1">
-            <ul>
-                <li><a href="" id="webname">Team</a></li>
 
-                <li><a href="/"class="active">home</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="contact.html" class="contact">Contact us</a></li>   
-            
-                   
-                
-            </ul>
+    <header>
+        <div id="topnav">
+            <h1>TEAM</h1>
         </div>
-        <div id="nav2">
+        <div id="nav">
             <ul>
-                <li><a href="" style="padding-left:45px ; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: xx-large;">Team</a><span class="material-icons md-50" id="menu" onclick="menuchange()">menu</span></li>
+                <!-- <li><a href="" id="webname">Team</a></li> -->
+                <li><a href="/" class="active"><i class="material-icons" style="font-size:36px">home</i></a></li>
+                <li><a href="about.html"><i class="material-icons" style="font-size:36px">info</i></a></li>
+                <li><a href=""><i class="material-icons" style="font-size:36px">payment</i></a></li>
+                <li><a href=""><i class="material-icons" style="font-size:36px">message</i></a></li>
+                <li><a href=""><i class="material-icons" style="font-size: 36px;">search</i> </a></li>
+                <li><a href="contact.html" class="contact">Contact us</a></li>
             </ul>
+            
         </div>
+
+
     </header>
-    <div id="menubar">
-        <ul>
-            <li><a href="index.html" class="active">home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="contact.html" class="contact">Contact us</a></li>
-        </ul>
-    </div>
+    
+      
+    
+
+  
+ 
     <div id="home">
+        
         <div id="home_box1">
             <h1>
                 Find the<span class="tomato"> best talent</span>
+        
+               
+              
             </h1>
 
         </div>
@@ -51,32 +70,32 @@
                 <!-- <label for="CityInput">City Name:</label> -->
                 <p>Lorem ipsum dolor rem cupiditate, mollitia, fugit esse soluta impedit nulla dolore ratione quo rem
                     quisquam. Nemo, sapiente.</p>
-               
-               
+
+
             </form>
-               
+
         </div>
     </div>
     <div id="middle0" style="height: 100%; padding: 60px 0px;">
         <div style="width: 100%; text-align: center; align-items: center;">
-           
+
             <div>
                 <i class="material-icons" style="font-size:48px;color:red">star_border</i>
                 <i class="material-icons" style="font-size:48px;color:red;">star_border</i>
                 <i class="material-icons" style="font-size:48px;color:red;">star_border</i>
-                <form action="/" method="post">      
+                <form action="/" method="post">
                     <!-- <label for="CityInput">City Name:</label> -->
                     <h1 style="color:rgb(225, 95, 0);">Temperature Finder</h1>
                     <input type="text" name="cityname" placeholder="Enter City Name">
                     <button type="submit" class="btn">Find</button>
                 </form>
             </div>
-            
-       </div>
-        
+
+        </div>
+
     </div>
     <div id="middle1">
-        <div id="middle_box1">
+        <div id="middle_box1" id="clickeventno" onclick="click1()">
             <h1><span class="tomato">Build & manage </span>distributed teams like no one else</h1>
 
         </div>
@@ -121,7 +140,8 @@
 
             </div>
             <div class="inside_box">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, quam qui! baksotefd tt Maiores dolore aspernatur
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, quam qui! baksotefd tt Maiores
+                    dolore aspernatur
                     libero mollitia culpa.</p><br><br><br>
                 <h2 class="tomato">Abhimanyu Anand</h2>
                 <span>Co-founder of Cyncosis</span>
@@ -150,7 +170,7 @@
         <div id="box1">
             <!-- <h1>Team1</h1> -->
             <i class="material-icons" style="font-size:48px;color:white">email</i>
-            
+
 
         </div>
         <div id="box2">
@@ -167,7 +187,7 @@
                 <option value="black">black</option>
                 <option value="white">white</option>
                 <option value="green">green</option>
-                <option value="blue">blue</option> 
+                <option value="blue">blue</option>
                 <option value="yellow">yellow</option>
                 <option value="brown">brown</option>
                 <option value="rgb(0,87, 142)">reset</option>
@@ -177,8 +197,8 @@
         </div>
     </div>
 
-            <!-- Frontend javascripy -->
-     <script src="js/frontend.js"></script>
+    <!-- Frontend javascripy -->
+    <script src="js/frontend.js"></script>
 </body>
 
 </html>

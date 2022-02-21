@@ -101,7 +101,7 @@ app.post('/contactform',function (req,res) {
                 code = response.statusCode;
                 console.log(code);
                 if(code=='200')
-                    res.redirect('/');
+                    res.redirect('/contact.html');
                 else
                     res.sendFile(__dirname+"/failure.html");
 

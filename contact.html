@@ -13,6 +13,7 @@
             height: auto;
             padding: 20px 0px;
         }
+        
         #middle1 #middle_box1 {
             
             flex-direction: column;
@@ -35,6 +36,7 @@
             padding: 15px;
             font-size: 16px;
             color: rgb(255, 255, 255);
+            opacity: 1;
         }
         
         textarea{
@@ -61,37 +63,42 @@
             textarea{
             
             width: 250px;
-        }
+            }
         
         }
+        #box{
+            background-color: rgb(4, 145, 145);
+            position: absolute;
+            top: 150px;
+            left: 500px;
+            /* display: none; */
+        }
+
     </style>
 </head>
 
 <body>
     <header>
-        <div id="nav1">
-            <ul>
-                <li><a href="">Team</a></li>
-                <li><a href="/">home</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="contact.html" class="contact active">Contact us</a></li>   
-            </ul>
+        <div id="topnav">
+            <h1>TEAM</h1>
         </div>
-        <div id="nav2">
+        <div id="nav">
             <ul>
-                <li><a href="" style="padding-left:45px ; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: xx-large;">Team</a><span class="material-icons md-50" id="menu" onclick="menuchange()">menu</span></li>
+                <!-- <li><a href="" id="webname">Team</a></li> -->
+                <li><a href="/" class="active"><i class="material-icons" style="font-size:36px">home</i></a></li>
+                <li><a href="about.html"><i class="material-icons" style="font-size:36px">info</i></a></li>
+                <li><a href=""><i class="material-icons" style="font-size:36px">payment</i></a></li>
+                <li><a href=""><i class="material-icons" style="font-size:36px">message</i></a></li>
+                <li><a href=""><i class="material-icons" style="font-size: 36px;">search</i> </a></li>
+                <li><a href="contact.html" class="contact">Contact us</a></li>
             </ul>
-        </div>
-    </header>
-    <div id="menubar">
-        <ul>
-            <li><a href="index.html">home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="contact.html" class="contact active">Contact us</a></li>
             
+        </div>
 
-        </ul>
-    </div>
+
+    </header>
+   
+    
     <div id="home">
         <div id="home_box1">
             <h1>
@@ -105,6 +112,7 @@
         </div>
     </div>
     <div id="middle1">
+       
         <div id="middle_box1">
             <h2><span class="tomato">Contact</span> Ask us about</h2>
             <span>The quality of our talent network</span>

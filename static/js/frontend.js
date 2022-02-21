@@ -1,8 +1,13 @@
 let menu = document.getElementById('menu');
 let menubar=document.getElementById('menubar');
 
-console.log(bc)
 
+console.log(bc)
+function click1()
+{
+    document.getElementById('middle_box1').style.color='red';
+    location.href='https://www.google.com';
+}
 function color_change(){
 
     let bc=document.getElementById('bc').value;
@@ -57,17 +62,17 @@ function color_change(){
 }
 
     
-    function menuchange() {
+    // function menuchange() {
 
-        if (menu.innerHTML!="close") {
-            menubar.style.display='flex';
-            menu.innerHTML="close"; 
+    //     if (menu.innerHTML!="close") {
+    //         menubar.style.display='flex';
+    //         menu.innerHTML="close"; 
                        
-        }
-        else {
-            menu.innerHTML="menu";
-            menubar.style.display='none';
+    //     }
+    //     else {
+    //         menu.innerHTML="menu";
+    //         menubar.style.display='none';
             
-        }
+    //     }
         
-    }
+    // }
