@@ -75,8 +75,8 @@ header{
     color: tomato;
 }
 header .login{
-    background: linear-gradient(119.54deg,#ff0037,#ff6600);
-    color: white;
+    background: linear-gradient(119.54deg,#ffffff,#ffffff);
+    color: rgb(0, 16, 236);
     font-weight: bolder;
     position: absolute;
     top: 60px;
@@ -85,8 +85,8 @@ header .login{
     border-radius: 4px;
 }
 header .register{
-    background: linear-gradient(119.54deg,#ff0037,#ff6600);
-    color: white;
+    background: linear-gradient(119.54deg,#ffffff,#ffffff);
+    color: rgb(0, 16, 236);
     font-weight: bolder;
     position: absolute;
     top: 60px;
@@ -247,7 +247,7 @@ header .username{
     display: flex;
     width: 100%;
     height: 450px;
-    background-color: rgb(0, 66, 66);
+     background-color: #061621;;
     /* border: 1px solid black; */
 }
 
@@ -310,7 +310,7 @@ header .username{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(0, 66, 66);
+    background-color: #061621;
     width: 100%;
     height: 100px;
     /* border: 1px solid black; */
@@ -351,6 +351,7 @@ header .username{
     
 #home {
     flex-direction: column;
+    
 }
 
 #home #home_box1 {
@@ -370,6 +371,11 @@ header .username{
     #middle1 #middle_box1{
         text-align: center;
         padding: 20px 0px;
+        
+    }
+    #middle1 #middle_box2{
+        background-color: rgb(255, 255, 255);
+        
     }
     #middle1 #middle_box2 .grid-container {
         grid-template-columns: auto ;
