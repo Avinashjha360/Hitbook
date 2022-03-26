@@ -1,0 +1,66 @@
+<%- include('partials/header') -%>
+<%- include('partials/css/contactStyle') %>
+
+<!-- 
+    <div id="home">
+        <div id="home_box1">
+            <h2>
+                Open up the full possibilities <span class="tomato">of the cloud </span>
+            </h2>
+        </div>
+        <div id="home_box2">
+            <p>Maintain healthy data across all your on-premises and cloud systems. Connect brings it all together with
+                support for virtually any cloud data warehouse and all major public cloud infrastructure providers.</p>
+        </div>
+    </div> -->
+    <div id="middle1">
+
+        <div id="middle_box1">
+            <h2>Connect With Us<span class="tomato"> Ask about</span></h2>
+            <span>The quality of our talent network</span>
+
+        </div>
+        <div id="middle_box2">
+            <form action="/userPost" method="POST" id="form">
+                <div><input type="text" name="name" placeholder="Name"></div><br>
+                <div><input type="text" name="title" placeholder="title"></div><br>
+                <textarea type="detail" name="about" placeholder="about"></textarea>
+                <div>
+                    <input type="submit" value="submit" id="submit"><br>
+                    <input type="reset" id="reset">
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <div id="middle3">
+        <div id="middle_box1">
+            <h1>Back to home?</h1>
+
+        </div>
+        <div id="middle_box2">
+            <ul>
+                <li>
+                    <a href="index.html" class="contact">home</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div id="bottom">
+        <div id="box1">
+            <i class="material-icons" style="font-size:48px;color:white">messenger</i>
+
+
+        </div>
+        <div id="box2">
+            <i class="material-icons" style="font-size:48px">help_outline</i>
+
+        </div>
+    </div>
+
+    <script src="js/frontend.js"></script>
+
+</body>
+
+</html>
