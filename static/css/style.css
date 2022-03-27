@@ -49,9 +49,9 @@ ul li a:hover{
  color: rgb(0, 60, 255);
 }
 #nav .material-icons{
-    margin-right: 40px;
-    margin-left: 20px;
     color: rgb(255, 255, 255);
+    margin: 3px 10px 3px 50px;
+    font-size: 2.3rem;
 }
 #nav .material-icons:hover{
     color: rgb(0, 60, 255);
@@ -127,6 +127,7 @@ header .username{
     text-align: center;
     width: 300px;
     height: unset;
+    padding: 50px 0px;
     background-color: white;
     color: black;
     box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -316,12 +317,13 @@ header .username{
 
 @media(max-width:800px){
 
-    #nav ul li {
-     margin: 0px;
-    }
-    #nav .material-icons{
-        margin: 4px 10px;
-    }
+#nav ul li {
+ margin: 0px;
+}
+#nav .material-icons{
+ margin: 4px 10px;
+ font-size: 1.9rem;
+}
 #home {
     flex-direction: column;  
 }
