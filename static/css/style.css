@@ -14,8 +14,7 @@ body {
 } 
 
 header{
-    position: fixed;
-    top:0;
+  
     width: 100%;
     background-color: rgba(0, 0, 0, 0.31);
     color: rgb(255, 255, 255);
@@ -29,6 +28,7 @@ header{
     padding: 0px 35px;
 }
 #nav {
+  
     background: linear-gradient(119.54deg,#000046,#1cb5e0);
     color: black;
     width: 100%;
@@ -352,7 +352,7 @@ header .username{
    
      #middle1 #middle_box2 .grid-item {
         background-color: rgba(255, 255, 255, 0.8);
-        padding: 30px 20px;
+        padding: 30px 70px;
         
       }
       
