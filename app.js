@@ -1,5 +1,6 @@
 // pnr: 2666311911
 require('dotenv').config();
+var _ = require('lodash');
 const express = require('express');
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -24,7 +25,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 mongoose.connect("mongodb+srv://admin-avinash:Avinash123@cluster0.azuhh.mongodb.net/userDB", { useNewUrlParser: true });
-//mongoose.connect("mongodb://localhost:27017/userDB", { useNewUrlParser: true });
+// mongoose.connect("mongodb://localhost:27017/userDB", { useNewUrlParser: true });
 const userSchema = new mongoose.Schema({
     username: String,
     password: String,
@@ -64,7 +65,6 @@ passport.deserializeUser(function (user, cb) {
 app.get('/', function (req, res) {
 
     UserDetail.find({}, function (err, foundUserDetails) {
-        
         if (req.isAuthenticated()) {
             UserDetail.findOne({ username: req.session.passport.user.username }, function (err, foundUserDetail) {
                 res.render('index', { temp: null, foundUserDetail: foundUserDetail, foundUserDetails: foundUserDetails, req: req  });
@@ -80,11 +80,15 @@ app.get("/register", function (req, res) {
 });
 
 app.post("/register", function (req, res) {
-    User.register({ username: req.body.username }, req.body.password, function (err, user) {
+   
+    User.register({ username:req.body.username}, req.body.password, function (err, user) {
         if (err) {
+            console.log(err);
             res.redirect("/register");
         } else {
+           console.log("auth1");
             passport.authenticate("local", { failureRedirect: '/register', failureMessage: true })(req, res, function () {
+                console.log("auth2");
                 res.redirect("/");
             });
         }
@@ -100,6 +104,7 @@ app.post("/login", function (req, res) {
         username: req.body.username,
         password: req.body.password
     });
+    console.log(user.username);
     req.login(user, function (err) {
         if (err) {
             res.redirect("/login");
@@ -181,7 +186,14 @@ app.get("/user/:userName", function (req, res) {
     });
 
 });
+app.get('/deleteUserDetail',function(req,res){
+    if (req.isAuthenticated()) {
+        UserDetail.deleteOne({ username: req.session.passport.user.username }, function (err, ) {
+            res.redirect("/");
+        });
+    } 
 
+});
 app.post('/tempFinder', function (req, res) {
     const city = req.body.cityname;
     const apikey = process.env.OPENWEATHER_API_KEY;

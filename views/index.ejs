@@ -13,10 +13,11 @@
                         </span>
                         degree celcius
                     </h1>
-                    <h2>The Current Weather is <%= temp.desc %></h2>
+                    <h2>The Current Weather is <%= temp.desc %>
+                    </h2>
                     <% }else{ %>
                         <h1>
-                            <span class="tomato" > Clean, complete,</span> uncompromised data for everyone
+                            <span class="tomato"> Clean, complete,</span> uncompromised data for everyone
                         </h1>
                         <% } %>
 
@@ -39,21 +40,22 @@
                     </div>
                 </div>
                 <% } else{%>
-                    <div id="temp-box">
-                        
-                        <div>
-                            <% if(foundUserDetail){  %>
+                    <div id="temp-box" style="position: relative;">
+                         <div>
+                            <% if(foundUserDetail){ %>
+                                <a href="/deleteUserDetail">
+                                    <i id="delete-button" class="material-icons" style="font-size:27px ;color:red;position:absolute;top:5px; right: 0; cursor: pointer;"  >delete</i></a>
+                                   
                                 
-                                
-                            <div class="logo"><img src="image/logo.jpg"></div>
-                                    <h2 style="color:rgb(225, 95, 0);"><%= foundUserDetail.name %></h2>
-                                    <h4 ><%=foundUserDetail.detail %></h4>
-                                    <p> Eos sapiente fugiat excepturi alias cumque eveniet. </p>
-                                    <button type="submit" class="btn">Add</button>
-                           
-                            <% } else{ %>   
-                                <a href="/userDetail"><i class="material-icons" >add_box</i></a>
-                           <% } %>
+                                <div class="logo"><img src="image/logo.jpg"></div>
+                                <h2 style="color:rgb(225, 95, 0);"><%= foundUserDetail.name %> </h2>
+                                <h4> <%=foundUserDetail.detail %></h4>
+                                <p> Eos sapiente fugiat excepturi alias cumque eveniet. </p>
+                                <button type="submit" class="btn">Add</button>
+
+                            <% } else{ %>
+                                    <a href="/userDetail"><i class="material-icons">add_box</i></a>
+                            <% } %>
                         </div>
                     </div>
                     <% } %>
@@ -78,9 +80,13 @@
                         <div class="grid-item inside_box" href="/user">
 
                             <div class="logo"><img src="image/logo.jpg"></div>
-                            <h2 class="tomato"> <%= user.name %></h2>
-                            <h4><%= user.detail %></h4><br>
-                        
+                            <h2 class="tomato">
+                                <%= user.name %>
+                            </h2>
+                            <h4>
+                                <%= user.detail %>
+                            </h4><br>
+
                         </div>
                     </a>
                     <% }); %>
