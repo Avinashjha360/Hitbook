@@ -97,8 +97,8 @@ header .username{
 #home {
     display: flex;
     width: 100%;
-    padding: 120px 0px 40px;
-    background: linear-gradient(119.54deg,#004f57 45% ,rgb(7, 216, 223));
+    padding: 60px 0px 40px;
+    background: linear-gradient(119.54deg,#004f57 35% ,rgb(7, 216, 223));
     /* border: 1px solid red; */
 }
 
@@ -107,7 +107,6 @@ header .username{
     justify-content: center;
     padding: 150px 30px 0px 0px;
     width: 60%;
-   
     /* border: 1px solid black;     */
 }
 
@@ -126,8 +125,8 @@ header .username{
     align-items: center;
     text-align: center;
     width: 300px;
-    height: unset;
-    padding: 50px 0px;
+    height: 300px;
+    padding:30px 10px;
     background-color: white;
     color: black;
     box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -139,20 +138,20 @@ header .username{
     background-color:rgb(255, 255, 255);
     border: 1px solid rgb(5, 0, 0);
     color:rgb(0, 0, 0);
-    margin: 30px 0px 0px 0px;
+    margin: 10px 0px ;
     padding: 7px 0px;
     text-indent: 30%;
     cursor:text;
 }
-.btn{
-    
-    background-image: linear-gradient(to left,#ff0000,#fc0);
+#home #home_box2 .btn{
+    background-image: linear-gradient(to left,#ff0000,rgb(228, 182, 0));
     color:white;
     border: 1px solid rgb(255, 255, 255);
-    border-radius: 7px;
+    border-radius: 6px;
     margin: 15px 0px;
-    padding: 5px 33%;
+    padding: 8px 33%;
     font-weight: bolder;
+    font-size: 1.4rem;
     cursor: pointer;
 }
 
@@ -200,6 +199,7 @@ header .username{
     text-align: center;
     align-items: center;
     flex-direction: column;
+    min-width: 200px;
     max-width: 300px;
     height: 140px;
     background-image: linear-gradient(0deg, #ffffff -9%, #ffffff 30%);
@@ -217,9 +217,9 @@ header .username{
 }
 #middle1 #middle_box2 .inside_box .logo {
     padding: 1px 0px 12px;
-    width: 80px;
-    height: 80px;
-    border-radius: 60px;
+    width: 90px;
+    height: 90px;
+    border-radius: 100px;
 }
 #middle2 {
     display: flex;

@@ -24,7 +24,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 mongoose.connect("mongodb+srv://admin-avinash:Avinash123@cluster0.azuhh.mongodb.net/userDB", { useNewUrlParser: true });
-// mongoose.connect("mongodb://localhost:27017/userDB", { useNewUrlParser: true });
+//mongoose.connect("mongodb://localhost:27017/userDB", { useNewUrlParser: true });
 const userSchema = new mongoose.Schema({
     username: String,
     password: String,
@@ -64,9 +64,10 @@ passport.deserializeUser(function (user, cb) {
 app.get('/', function (req, res) {
 
     UserDetail.find({}, function (err, foundUserDetails) {
+        console.log(foundUserDetails);
         if (req.isAuthenticated()) {
             UserDetail.findOne({ username: req.session.passport.user.username }, function (err, foundUserDetail) {
-            
+                
                 res.render('index', { temp: null, foundUserDetail: foundUserDetail, foundUserDetails: foundUserDetails, auth: req.isAuthenticated() });
             });
         } else
@@ -173,6 +174,7 @@ app.get("/user/:userName", function (req, res) {
 
     UserDetail.findOne({ username: req.params.userName }, function (err, foundUser) {
         if (foundUser) {
+            console.log(foundUser);
             res.render("user", { foundUser: foundUser, auth: req.isAuthenticated() });
         }
         else {
