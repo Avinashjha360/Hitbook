@@ -24,7 +24,7 @@
 
         </div>
         <div id="home_box2">
-            <% if(!auth){ %>
+            <% if(!req.isAuthenticated()){ %>
                 <div id="temp-box">
                     <div>
                         <i class="material-icons" style="font-size:48px;color:red">star_border</i>

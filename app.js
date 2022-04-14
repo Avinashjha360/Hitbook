@@ -64,20 +64,19 @@ passport.deserializeUser(function (user, cb) {
 app.get('/', function (req, res) {
 
     UserDetail.find({}, function (err, foundUserDetails) {
-        console.log(foundUserDetails);
+        
         if (req.isAuthenticated()) {
             UserDetail.findOne({ username: req.session.passport.user.username }, function (err, foundUserDetail) {
-                
-                res.render('index', { temp: null, foundUserDetail: foundUserDetail, foundUserDetails: foundUserDetails, auth: req.isAuthenticated() });
+                res.render('index', { temp: null, foundUserDetail: foundUserDetail, foundUserDetails: foundUserDetails, req: req  });
             });
         } else
-            res.render('index', { temp: null, foundUser: null, foundUserDetails: foundUserDetails, auth: req.isAuthenticated() });
+            res.render('index', { temp: null, foundUser: null, foundUserDetails: foundUserDetails, req: req });
     });
     
 });
 
 app.get("/register", function (req, res) {
-    res.render("register", { auth: req.isAuthenticated() });
+    res.render("register", { req: req });
 });
 
 app.post("/register", function (req, res) {
@@ -93,7 +92,7 @@ app.post("/register", function (req, res) {
 });
 
 app.get("/login", function (req, res) {
-    res.render("login", { auth: req.isAuthenticated() });
+    res.render("login", { req: req });
 });
 
 app.post("/login", function (req, res) {
@@ -121,7 +120,7 @@ app.get("/logout", function (req, res) {
 app.get('/userDetail', function (req, res) {
 
     if (req.isAuthenticated()) {
-        res.render("userDetail", { auth: req.isAuthenticated() });
+        res.render("userDetail", { req: req });
     } else {
         res.redirect("/login");
     }
@@ -146,7 +145,7 @@ app.post('/userDetail', function (req, res) {
 app.get('/userPost', function (req, res) {
 
     if (req.isAuthenticated()) {
-        res.render("userPost", { auth: req.isAuthenticated() });
+        res.render("userPost", { req: req });
     } else {
         res.redirect("/login");
     }
@@ -174,8 +173,7 @@ app.get("/user/:userName", function (req, res) {
 
     UserDetail.findOne({ username: req.params.userName }, function (err, foundUser) {
         if (foundUser) {
-            console.log(foundUser);
-            res.render("user", { foundUser: foundUser, auth: req.isAuthenticated() });
+            res.render("user", { foundUser: foundUser,req: req  });
         }
         else {
             console.log("User not found");
@@ -204,7 +202,7 @@ app.post('/tempFinder', function (req, res) {
                     desc: w.weather[0].description,
                 }
                 UserDetail.find({}, function (err, foundUserDetails) {
-                        res.render('index', { temp: temp, foundUser: null, foundUserDetails: foundUserDetails, auth: req.isAuthenticated() });
+                        res.render('index', { temp: temp, foundUser: null, foundUserDetails: foundUserDetails, req: req  });
                 });
 
             }
