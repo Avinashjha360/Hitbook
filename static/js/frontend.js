@@ -12,7 +12,7 @@ function clickDeleteButton()
 
 
 let user_profile_box = document.querySelector('#profile-box');
-user_profile_box.style.display='none';
+
 
 function clickUserProfile()
 {
