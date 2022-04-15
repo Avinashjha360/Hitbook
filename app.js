@@ -83,12 +83,10 @@ app.post("/register", function (req, res) {
    
     User.register({ username:req.body.username}, req.body.password, function (err, user) {
         if (err) {
-            console.log(err);
             res.redirect("/register");
         } else {
            console.log("auth1");
             passport.authenticate("local", { failureRedirect: '/register', failureMessage: true })(req, res, function () {
-                console.log("auth2");
                 res.redirect("/");
             });
         }
@@ -104,7 +102,6 @@ app.post("/login", function (req, res) {
         username: req.body.username,
         password: req.body.password
     });
-    console.log(user.username);
     req.login(user, function (err) {
         if (err) {
             res.redirect("/login");
