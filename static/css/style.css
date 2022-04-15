@@ -313,7 +313,18 @@ header .username{
 
 }
 
-
+@media(max-width:1230px){
+    #middle1 #middle_box2 .grid-container {
+        grid-template-columns: auto auto auto ;
+       
+    }
+}
+@media(max-width:930px){
+    #middle1 #middle_box2 .grid-container {
+        grid-template-columns: auto auto ;
+       
+    }
+}
 
 @media(max-width:800px){
 
