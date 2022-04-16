@@ -89,7 +89,7 @@ header .username{
     cursor: pointer;
 }
 header #profile-box{
-    display: none;
+  
     background-color: white;
     position: absolute;
     top: 95px;
@@ -106,7 +106,6 @@ header #profile-box li:last-child {
    color: black;
    margin: 0%;
    padding: 5px 5px 5px 10px;
-   
   }
 .contact {
     color: white;

@@ -13,9 +13,9 @@ function clickDeleteButton()
 
 let user_profile_box = document.querySelector('#profile-box');
 
-
 function clickUserProfile()
 {
+  alert("clicked");
     if(user_profile_box.style.display != 'inline')
     user_profile_box.style.display='inline';
     else
