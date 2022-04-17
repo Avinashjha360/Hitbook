@@ -1,7 +1,4 @@
 
-
-
-
 function clickDeleteButton()
 {
     let delete_button_box = document.querySelector('#delete-button > a');
@@ -10,8 +7,6 @@ function clickDeleteButton()
     else
         delete_button_box.style.display='none';  
 }
-
-
   
 function clickUserProfile()
 {
