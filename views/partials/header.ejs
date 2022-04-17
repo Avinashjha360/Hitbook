@@ -21,6 +21,20 @@
     <header>
         <div id="topnav">
             <h1>Hitbook</h1>
+            <%  if(req.isAuthenticated()){  %>
+                <li><a class="username" onclick="clickUserProfile()"><%=req.user.username %></a></li>
+
+                <div id="profile-box">
+                    <li><i class="fa fa-user-o"></i> Profile</li>
+                    <li><i class="fa fa-bookmark-o"></i> Saved</li>
+                    <li><i class="fa fa-gear"></i> Settings</li><hr>
+                    <li><a href="/logout">Logout</a></li>
+                </div>
+                
+            <% }else { %>
+                <li><a href="/register" class="register">Register</a></li>
+                <li><a href="/login" class="login">Login</a></li>
+                <% } %>
         </div>
         <div id="nav">
             <ul>
@@ -28,19 +42,7 @@
                 <li><a href="/"><i class="material-icons md-light">home</i></a></li>
                 <li><a href="/userPost"><i class="material-icons" >add_box</i></a></li>
                 <li><a href=""><i class="material-icons">search</i> </a></li>
-                <%  if(req.isAuthenticated()){  %>
-                    <li><a class="username" onclick="clickUserProfile()"><%=req.user.username %></a></li>
-
-                    <div id="profile-box">
-                        <li> <i class="fa fa-user-o" style="font-size:15px"></i> Profile</li>
-                        <li><i class="fa fa-bookmark-o" style="font-size:15px"></i> Saved</li>
-                        <li><i class="fa fa-gear" style="font-size:15px"></i> Settings</li><hr>
-                        <li><a href="/logout">Logout</a></li>
-                    </div>
-                    
-                <% }else { %>
-                    <li><a href="/register" class="register">Register</a></li>
-                    <li><a href="/login" class="login">Login</a></li>
-                    <% } %>
+               
+            </ul>
     </header>
 

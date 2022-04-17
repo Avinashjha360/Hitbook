@@ -60,44 +60,61 @@ ul li a:hover{
     color: tomato;
 }
 header .login{
-    background: linear-gradient(119.54deg,#ffffff,#ffffff);
-    color: rgb(0, 16, 236);
+    background-image: linear-gradient(to left,#0b00a3,rgb(0, 184, 184));
+    color:white;
+    font-size:medium;
     font-weight: bolder;
-    position: absolute;
-    top: 55px;
-    right: 10px;
     padding: 3px 10px;
     border-radius: 4px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 header .register{
-    background: linear-gradient(119.54deg,#ffffff,#ffffff);
-    color: rgb(0, 16, 236);
+    background-image: linear-gradient(to left,#0b00a3,rgb(0, 184, 184));
+    color:white;
+    font-size:medium;
+    font-weight: bolder;
     position: absolute;
-    top: 55px;
-    right: 90px;
     padding: 3px 10px;
     border-radius: 4px;
+    top: 10px;
+    right: 90px; 
 }
 header .username{
-    background: linear-gradient(119.54deg,#ffffff,#ffffff);
-    color: rgb(17, 0, 255);
-    position: absolute;
-    top: 55px;
-    right: 10px;
-    padding: 5px 10px;
+    background-image: linear-gradient(to left,#0b00a3,rgb(0, 184, 184));
+    color:white;
+    font-size:medium;
+    font-weight: bolder;
+    padding: 3px 10px;
     border-radius: 4px;
     cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 header #profile-box{
-  
+    display: none;
     background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: black;
+    border-top: 3px solid red;
+    font-size: 17px;
+    cursor: pointer;
     position: absolute;
-    top: 95px;
-    right: 30px;
+    top: 50px;
+    right: 23px;
 }
 header #profile-box li{
-    padding: 0px 15px 0px 5px;
+    padding: 6px 25px 6px 0px;
     display: block;
+}
+header #profile-box li:hover{
+    background-color: wheat;
+}
+header #profile-box i{
+    font-size:15px;
+    padding: 0px 10px 0px 15px;
 }
 header #profile-box hr{
     opacity: 0.4;
@@ -149,11 +166,27 @@ header #profile-box li:last-child {
     padding:30px 10px;
     background-color: white;
     color: black;
-    box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     /* border: 1px solid black; */
 }
-
+#delete-button > i{
+    font-size:25px; 
+    position:absolute; 
+    top:5px; 
+    right: 6px; 
+    cursor: pointer;
+}
+#delete-button > a{
+    display: none;
+    background-color: white;
+    color: black;
+    padding: 5px 20px;
+    position:absolute;
+    top:-0px; 
+    right: -83px; 
+    cursor: pointer;
+}
 #home #home_box2 input{
     background-color:rgb(255, 255, 255);
     border: 1px solid rgb(5, 0, 0);
@@ -233,8 +266,8 @@ header #profile-box li:last-child {
 }
 #middle1 #middle_box2 .inside_box:hover{
     box-shadow:  0px 2px 10px 2px rgb(224, 218, 218);
-    
 }
+
 #middle1 #middle_box2 .inside_box .logo {
     padding: 1px 0px 12px;
     width: 90px;
